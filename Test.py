@@ -1,10 +1,10 @@
-prent('ffffff')
-a = input(safasfa')
+print('ffffff')
+a = input('safasfa')
 b = int(6)
-for i range:
-  pritn('fdsf')
-prtn('erer')
-print('saca',s)
+for i in range:
+  print('fdsf')
+print('erer')
+print('saca, s')
 priпt('YRA')
-g = int(input('Введи что нибудь')
-print('привет)
+g = int(input('Введи что-нибудь')
+print('привет')
