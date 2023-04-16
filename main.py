@@ -3,25 +3,30 @@ from PyQt5.QtWidgets import*
 app = QApplication([])
 okno = QWidget()
 
-main = QHBoxLayout()
-okno.setLayout(main)
+okno.setWindowTitle('Калькулятор')
+okno.resize(500,500)
 
-line1 = QVBoxLayout()
-line2 = QVBoxLayout()
-main.addLayout(line1)
-main.addLayout(line2)
+t1 = QLabel(okno)
+t1.setText('Тут что-то написано?')
+t1.move(300,360)
 
-b1 = QPushButton('Дальше')
-tx1 = QLabel('результат')
-line1.addWidget(b1)
-line2.addWidget(tx1)
+b1 = QPushButton(okno)
+b1.setText('Нет')
+b1.move(100,250)
 
-tx1.hide()
+from random import*
 
-def next1():
-    tx1.show()
-    b1.hide()
-b1.clicked.connect(next1)
+def react1():
+    x = randint(0,250)
+    y = randint(0,250)
+    b1.move(x,y)
+    w = randint(30,100)
+    h = randint(30,100)
+    b1.resize(w,h)
+    t1.setText('ДА')
+b1.clicked.connect(react1)
+
+
 
 okno.show()
 app.exec_()
